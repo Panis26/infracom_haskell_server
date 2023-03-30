@@ -26,7 +26,7 @@ public class client {
 
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.print("Ingrese el nombre del archivo: ");
-            String fileName = scanner.nextLine();
+            String fileName = "./UDP/data/"+ scanner.nextLine();
 
             System.out.print("Ingrese la cantidad de clientes a enviar: ");
             int numClients = scanner.nextInt();
@@ -41,7 +41,7 @@ public class client {
             
             int clientNumber = numClientsConnected + 1 - numClients;
             //Construir el nombre del archivo con el formato solicitado
-            String newFileName = "UDP/archivosRecibidos/Cliente"+ clientNumber + "-Prueba-" + numClients + ".txt";
+            String newFileName = "./UDP/archivosRecibidos/Cliente"+ clientNumber + "-Prueba-" + numClients + ".txt";
             File newFile = new File(newFileName);
 
             try (DatagramSocket socket = new DatagramSocket()) {

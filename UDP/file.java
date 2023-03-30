@@ -7,7 +7,7 @@ import java.util.*;
 class file{
     public static void main(String[] args) throws IOException{
         //Se crea un archivo de 100MB
-        File file = new File("100MB.bin");
+        File file = new File("UDP/data/100MB.bin");
         FileOutputStream fos = new FileOutputStream(file);
         byte[] buffer = new byte[1024];
         Random random = new Random();
@@ -17,7 +17,7 @@ class file{
         }
         fos.close();
         //Se crea un archivo de 250MB
-        File file2 = new File("250MB.bin");
+        File file2 = new File("UDP/data/250MB.bin");
         FileOutputStream fos2 = new FileOutputStream(file2);
         byte[] buffer2 = new byte[1024];
         Random random2 = new Random();

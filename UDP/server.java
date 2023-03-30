@@ -61,6 +61,7 @@ public class server {
                 }   
 
                 //Cración de thread para procesar la petición del cliente
+                System.out.println(packet.getData());
                 ConnectionHandler handler = new ConnectionHandler(clientAddress, clientPort, packet.getData(),packet.getLength());
                 Thread thread = new Thread(handler);
                 thread.start();
